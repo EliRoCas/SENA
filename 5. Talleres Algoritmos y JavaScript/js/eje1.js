@@ -10,11 +10,15 @@ num_pasajes = cupo / v_pasaje;
 
 document.getElementById('resultado--eje1').innerHTML = "La cantidad de pasajes que tiene es " + num_pasajes;
 
-if (num_pasajes <= 2) {
-    alerta = "Usted tiene 2 o menos pasajes, por tanto, debe recargar su tarjeta"
-}
-else {
-    alerta = `Usted tiene ${num_pasajes} pasajes`
-}
+// Como se haría sin interpolación y operaciones ternarias
+
+// if (num_pasajes <= 2) {
+//alerta = "Usted tiene 2 o menos pasajes, por tanto, debe recargar su tarjeta"
+//}
+//else {
+//  alerta = `Usted tiene ${num_pasajes} pasajes`
+//}
+
+alerta = `Usted tiene ${num_pasajes <= 2 ? `2 o menos pasajes, por tanto, debe recargar` : `${num_pasajes} pasajes`}`;
 
 alert(alerta);
