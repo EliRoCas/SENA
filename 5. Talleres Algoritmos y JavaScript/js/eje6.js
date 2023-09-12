@@ -4,13 +4,13 @@ let nota_parcial1 = parseFloat(prompt('Ingrese la nota de su primer parcial'));
 let nota_parcial2 = parseFloat(prompt('Ingrese la nota de su segundo parcial'));
 let nota_parcial3 = parseFloat(prompt('Ingrese la nota de su examen final'));
 let nota_final = (nota_parcial1 * 0.3 + nota_parcial2 * 0.3 + nota_parcial3 * 0.4);
-const nota=document.getElementById('resultado--eje6');
+const nota = document.getElementById('resultado--eje6');
 
-nota.innerHTML=`Su nota final es ${nota_final} ${nota_final>=3.2 ? '¡Felicitaciones, aprobó!' : 'Reprobó'}`;
+nota.innerHTML = `Su nota final es ${nota_final} ${nota_final >= 3.2 ? '¡Felicitaciones, aprobó!' : 'Reprobó'}`;
 
 
 
-//Forma inicial 
+//Forma inicial
 // let nota_final, nota_parcial1, nota_parcial2, nota_parcial3;
 
 // nota_parcial1 = parseFloat(prompt('Ingrese la nota de su primer parcial'));
