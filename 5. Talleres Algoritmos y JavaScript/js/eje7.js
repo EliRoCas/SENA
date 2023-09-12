@@ -10,7 +10,7 @@ if (num_autos > 15) {
     bono = 40;
 }
 
-let sueldo_bruto  = pago_base + comision + bono;
+let sueldo_bruto = pago_base + comision + bono;
 const impuesto = sueldo_bruto * 0.25;
 let sueldo_neto = sueldo_bruto - impuesto;
 
