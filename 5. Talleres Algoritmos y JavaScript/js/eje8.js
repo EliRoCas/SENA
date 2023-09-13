@@ -8,9 +8,9 @@ let maximo= Math.max(num1_usu, num2_usu, num3_usu);
 let minimo = Math.min(num1_usu, num2_usu, num3_usu);
 let promedio = (num1_usu + num2_usu + num3_usu) / 3;
 
-let text_max = "El máximo entre los tres números ingresados es: " + maximo;
-let text_min = ". El mínimo entre los tres números ingresados es: " + minimo;
-let text_promedio = ". El promedio de tres números ingresados es: " + promedio;
+let text_max = `El máximo entre los tres números ingresados es: ${maximo}`;
+let text_min = `. El mínimo entre los tres números ingresados es: ${minimo}`;
+let text_promedio = `. El promedio de tres números ingresados es: ${promedio}`;
 
 
 let mayuscula, caracter;
@@ -20,10 +20,10 @@ let text_mayuscula = "";
 let text_minuscula = "";
 
 if (/^[A-Z]$/.test(mayuscula)) {
-    text_mayuscula = ". Su letra es " + mayuscula + ". Su letra es mayuscula";
+    text_mayuscula = `. Su letra es ${mayuscula}. Su letra es mayuscula`;
 }
 else if (/^[a-z]$/.test(mayuscula)) {
-    text_mayuscula = ". Su letra es: " + mayuscula + ". Su letra es minuscula";
+    text_mayuscula = `. Su letra es ${mayuscula}. Su letra es minuscula`;
 }
 
 caracter = prompt('Ingrese un caracter');
@@ -33,10 +33,10 @@ text_caracter = "";
 text_caracterNN = "";
 
 if (/^\d$/.test(caracter)) {
-    text_caracter = ". Su caracter es el número " + caracter;
+    text_caracter = `. Su caracter es el número ${caracter}`;
 }
 else {
-    text_caracterNN = ". Lo sentimos, " + caracter + ", no es es un número";
+    text_caracterNN = `. Lo sentimos, ${caracter}, no es es un número`;
 }
 
-document.getElementById('resultado--eje8').innerHTML = text_max + " " + text_min + " " + text_promedio + " " + text_mayuscula + " " + text_minuscula + " " + text_caracter + " " + text_caracterNN;
+document.getElementById('resultado--eje8').innerHTML = ` ${text_max} ${text_min} ${text_promedio} ${text_mayuscula} ${text_minuscula} ${text_caracter} ${text_caracterNN}`;
