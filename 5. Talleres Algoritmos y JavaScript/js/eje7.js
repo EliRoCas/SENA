@@ -3,16 +3,16 @@ document.getElementById('enunciado--eje7').innerHTML = "Calcule e imprima el pag
 let nombre = prompt('Nombre');
 let num_autos = parseInt(prompt('Número de autos vendidos en el mes'));
 const pago_base = 350;
-let comision = 15 * num_autos;
+const comision = 15 * num_autos;
 let bono = 0;
 
 if (num_autos > 15) {
     bono = 40;
 }
 
-let sueldo_bruto = pago_base + comision + bono;
+const sueldo_bruto = pago_base + comision + bono;
 const impuesto = sueldo_bruto * 0.25;
-let sueldo_neto = sueldo_bruto - impuesto;
+const sueldo_neto = sueldo_bruto - impuesto;
 
 
 document.getElementById('resultado--eje7').innerHTML = "Vendedor: " + nombre + " su sueldo bruto es: " + sueldo_bruto + ", el impuesto es: " + impuesto + ", por tanto su sueldo neto es: " + sueldo_neto;

@@ -2,7 +2,7 @@ document.getElementById('enunciado--eje5').innerHTML = "Escriba un algoritmo que
 
 let num_a = parseInt(prompt('Ingrese el valor de a '));
 let num_b = parseInt(prompt('Ingrese el valor de b'));
-let temp;
+//let temp;
 let final = document.getElementById('resultado--eje5');
 
 // Con destructuración de arreglos, para intercambiar los valores de a y b 

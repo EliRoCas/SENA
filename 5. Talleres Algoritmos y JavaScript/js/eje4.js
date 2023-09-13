@@ -3,7 +3,7 @@ document.getElementById('enunciado--eje4').innerHTML = "Determine si un viajero 
 let num_puntos = parseInt(prompt('Ingrese la cantidad de puntos que posee'));
 let solt = document.getElementById('resultado--eje4');
 
-solt.innerHTML=`Puede estar en clase ${num_puntos>=2000 ? "Ejecutiva" : (num_puntos < 2000 && num_puntos >= 1000) ? 'Normal': 'Eco'} `;
+solt.innerHTML = `Puede estar en clase ${num_puntos >= 2000 ? "Ejecutiva" : (num_puntos < 2000 && num_puntos >= 1000) ? 'Normal' : 'Eco'} `;
 
 // switch (true) {
 //     case num_puntos >= 2000:
