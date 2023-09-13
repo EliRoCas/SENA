@@ -15,7 +15,7 @@ const impuesto = sueldo_bruto * 0.25;
 const sueldo_neto = sueldo_bruto - impuesto;
 
 
-document.getElementById('resultado--eje7').innerHTML = "Vendedor: " + nombre + " su sueldo bruto es: " + sueldo_bruto + ", el impuesto es: " + impuesto + ", por tanto su sueldo neto es: " + sueldo_neto;
+document.getElementById('resultado--eje7').innerHTML = `Vendedor: ${nombre} su sueldo bruto es ${sueldo_bruto}, el impuesto es ${impuesto} , por tanto su sueldo neto es: ${sueldo_neto}`;
 
 
 
