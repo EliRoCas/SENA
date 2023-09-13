@@ -7,19 +7,24 @@ let name = prompt('Ingrese su nombre completo');
 let cedula = prompt('Ingrese su número de cédula');
 let edad = prompt('Ingrese su edad');
 
-const profesionales = "";
-const aficionados = "";
-const novatos = "";
+const clasifican = "Usted esta clasificado como ";
 
-if (edad >= 25 && edad <= 40) {
-    result11.innerHTML = "Usted está clasificado como profesional";
-}
-else if (edad >= 18 && edad <= 24) {
-    result11.innerHTML = "Usted está clasificado como afisionado";
-}
-else if (edad >= 12 && edad <= 17) {
-    result11.innerHTML = "Usted está clasificado como novato";
-}
-else {
-    result11.innerHTML = "Usted no puede clasificar a ninguna categoría";
-}
+result11.innerHTML = ` ${edad >= 25 && edad <= 40 ? `${clasifican} profesional`
+    : (edad >= 18 && edad <= 24)
+        ? `${clasifican} aficionado`
+        : (edad >= 12 && edad <= 17)
+            ? `${clasifican} novato`
+            : "Usted no puede clasificar a ninguna categoría"}`;
+
+// if (edad >= 25 && edad <= 40) {
+//     result11.innerHTML = "Usted está clasificado como profesional";
+// }
+// else if (edad >= 18 && edad <= 24) {
+//     result11.innerHTML = "Usted está clasificado como afisionado";
+// }
+// else if (edad >= 12 && edad <= 17) {
+//     result11.innerHTML = "Usted está clasificado como novato";
+// }
+// else {
+//     result11.innerHTML = "Usted no puede clasificar a ninguna categoría";
+// }
