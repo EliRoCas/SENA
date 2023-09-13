@@ -4,7 +4,7 @@ let num1_usu = parseInt(prompt('Ingrese su primer número '));
 let num2_usu = parseInt(prompt('Ingrese su segundo número '));
 let num3_usu = parseInt(prompt('Ingrese su tercer número '));
 
-let maximo= Math.max(num1_usu, num2_usu, num3_usu);
+let maximo = Math.max(num1_usu, num2_usu, num3_usu);
 let minimo = Math.min(num1_usu, num2_usu, num3_usu);
 let promedio = (num1_usu + num2_usu + num3_usu) / 3;
 
@@ -18,6 +18,8 @@ let mayuscula, caracter;
 mayuscula = prompt('Ingrese una letra');
 let text_mayuscula = "";
 let text_minuscula = "";
+
+
 
 if (/^[A-Z]$/.test(mayuscula)) {
     text_mayuscula = `. Su letra es ${mayuscula}. Su letra es mayuscula`;
