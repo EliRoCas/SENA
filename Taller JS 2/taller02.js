@@ -75,6 +75,28 @@ function ejer03Result() {
     document.getElementById('resultado').innerHTML = `El valor a pagar es ${totalPago - rebaja}`;
 }
 
+//Ejercicio 04
+function ejer04() {
+    document.getElementById('enunciado').innerHTML = `
+    <p>Calcular el número de pulsaciones que debe tener una persona por cada 10
+    segundos de ejercicio aeróbico; la fórmula que se aplica cuando el sexo es
+    femenino es: 
+    <ul> 
+    <li> num. pulsaciones ← (220 - edad)/10 </li> 
+    </ul>
+    Si el sexo es masculino:
+    <ul>
+    <li>num. pulsaciones ← (210 - edad)/10 </li> 
+    </ul>
+    </p>
+    <input type="button" value="Enviar" onclick="ejer04Result()">
+    `;
+}
+
+function ejer04Result(){  
+    let numPulsacionesF =  
+}
+
 
 //Ejercicio 05 
 function ejer05() {
