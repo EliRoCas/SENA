@@ -50,9 +50,35 @@ function ejer02Result() {
     let total = document.getElementById('resultado').innerHTML = `Valor a pagar ${totalNoDiscount - totalDiscount}`;
 }
 
+// Ejercicio 03 
+function ejer03() {
+    document.getElementById('enunciado').innerHTML = `
+    <p>En un supermercado se hace una promoción, mediante la cual el cliente
+    obtiene un descuento dependiendo de un número que se escoge al azar los
+    numeros deben de estar entre 1 y 10. Si el número escogido es menor que
+    10 el descuento es del 15% sobre el total de la compra, si es menor o igual
+    a 5 el descuento es del 20%. Obtener cuánto dinero se le descuenta.</p>
+    <input type="button" value="Enviar" onclick="ejer03Result()">
+    `;
+}
+
+function ejer03Result() {
+    const totalPago = parseFloat(prompt('Ingrese el valor total de la compra'));
+    const numeroDescuento = parseInt(prompt('Ingrese un número del 1 al 10'));
+
+    let rebaja = totalPago * (/[1-5]/.test(numeroDescuento)
+        ? 0.2
+        : numeroDescuento >= 6 && numeroDescuento <= 10
+            ? 0.15
+            : 0);
+
+    document.getElementById('resultado').innerHTML = `El valor a pagar es ${totalPago - rebaja}`;
+}
+
 
 //Ejercicio 05 
 function ejer05() {
+
     document.getElementById('enunciado').innerHTML = `
     <p>Elabore un algoritmo que lea un número negativo e imprima el 
     número y el positivo del mismo.</p>
@@ -72,6 +98,7 @@ function positivo() {
         alert('El número no es negativo');
     }
 }
+
 //Ejercicio 21
 function ejer21() {
     document.getElementById('enunciado').innerHTML = `
