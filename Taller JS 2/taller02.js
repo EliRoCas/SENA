@@ -93,8 +93,15 @@ function ejer04() {
     `;
 }
 
-function ejer04Result(){  
-    let numPulsacionesF =  
+function ejer04Result() {
+    const edad = parseInt(prompt('Ingrese su edad.'));
+    let sexo = prompt('Ingrese el sexo femenino o masculino');
+    let numPulsacionesF = (220 - edad) / 10;
+    let numPulsacionesM = (220 - edad) / 10;
+    document.getElementById('resultado').innerHTML = `Su número de pulsaciones por cada 10 segundos de ejercicio debe ser: <br> 
+    ${sexo === "masculino"
+            ? numPulsacionesM
+            : numPulsacionesF}`;
 }
 
 
@@ -119,6 +126,86 @@ function positivo() {
     else {
         alert('El número no es negativo');
     }
+}
+
+//Ejercicio 06 
+function ejer06() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Hacer un algoritmo que permita pasar de kilogramos a gramos y toneladas.</p>
+    <input type="button" value="Enviar" onclick="ejer06Result()">
+    `;
+}
+
+function ejer06Result() {
+    const masa = parseFloat(prompt('Ingrese la cantidad o masa a convertir. (No incluya la unidad de medida)'));
+    const unidadBase = prompt('Ingrese en que unidad está su masa. (Use las convenciones kg para kilogramos, g para gramos y t para tonelada) ')
+    const unidadMedida = prompt('Ingrese la unidad de medida a la que quiere convertir. (Use las convenciones kg para kilogramos, g para gramos y t para tonelada).');
+    const ecuacionKgaG = masa * (1000 / 1);
+    const ecuacionGaT = masa * (1 / 1000) * (1 / 1000);
+
+
+    switch (true) {
+        case unidadBase === 'kg' && unidadMedida === 'g':
+            document.getElementById('resultado').innerHTML = `${masa} ${unidadBase} son ${ecuacionKgaG} ${unidadMedida}`;
+            break;
+        case unidadBase === 'g' && unidadMedida === 't':
+            document.getElementById('resultado').innerHTML = `${masa} ${unidadBase} son ${ecuacionGaT} ${unidadMedida}`;
+            break;
+        default:
+            alert('los datos ingresados no son válidos');
+    }
+}
+
+// Ejercicio 07
+function ejer07() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Un paquete de galletas cuesta $3.500 y contiene 15 galletas, ¿cuánto
+    cuestan X cantidad de galletas de ellas? Elabore un algoritmo para obtener
+    la respuesta.</p>
+    <input type="button" value="Enviar" onclick="ejer07Result()">
+    `;
+}
+
+function ejer07Result() {
+    const paquete = 3500;
+    const nGalletas = parseFloat(prompt('Ingrese la cantildad de galletas que desea adquierir.'));
+    let costoUd = (paquete / 15);
+    document.getElementById('resultado').innerHTML = `${nGalletas} galletas le cuestan ${costoUd * nGalletas}`;
+
+}
+
+// Ejercicio 08
+function ejer08() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Si 15 cuadernos cuestan $75000, ¿cuánto cuestan X cantidad de
+    cuadernos?. Elabore un algoritmo para hallar la respuesta correcta.</p>
+    <input type="button" value="Enviar" onclick="ejer08Result()">
+    `;
+}
+
+function ejer08Result() {
+    const paqueteCuadernos = 75000;
+    const nCuadernos = parseFloat(prompt('Ingrese la cantidad de cuadernos que desea adquierir.'));
+    let costoUdC = (paqueteCuadernos / 15);
+    document.getElementById('resultado').innerHTML = `${nCuadernos} cuadernos le cuestan ${costoUdC * nCuadernos}`;
+}
+
+//Ejercicio 09
+function ejer09() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Realizar un programa que cuente de 1 a 200 e imprima en pantalla los
+    números divisibles por 6, y cuando llegue a 200 cuente de forma regresiva
+    hasta 20 e imprima los divisibles por 8.</p>
+    <input type="button" value="Enviar" onclick="ejer09Result()">
+    `;
+}
+
+function ejer09Result() {
+
 }
 
 //Ejercicio 21
