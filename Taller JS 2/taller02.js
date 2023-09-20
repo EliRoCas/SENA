@@ -230,52 +230,45 @@ function ejer10() {
 }
 
 function ejer10Result() {
-    function calcularEdad(nombre, date1, month1, year1) {
-        function calcularEdad(fechaNacimiento) {
-            const hoy = new Date();
-            const nacimiento = new Date(fechaNacimiento);
-            let edad = hoy.getFullYear() - nacimiento.getFullYear();
-          
-            // Comprobar si aún no ha llegado el cumpleaños de este año
-            const cumpleaniosEsteAnio = nacimiento.setFullYear(hoy.getFullYear());
-            if (hoy < cumpleaniosEsteAnio) {
-              edad--;
-            }
-          
-            return edad;
-          }
-          
-          // Solicitar nombre y fecha de nacimiento de la primera persona
-          const nombrePersona1 = prompt("Ingresa el nombre de la primera persona:");
-          const diaPersona1 = parseInt(prompt("Ingresa el día de nacimiento de la primera persona:"));
-          const mesPersona1 = parseInt(prompt("Ingresa el mes de nacimiento de la primera persona (1-12):"));
-          const anioPersona1 = parseInt(prompt("Ingresa el año de nacimiento de la primera persona:"));
-          
-          // Solicitar nombre y fecha de nacimiento de la segunda persona
-          const nombrePersona2 = prompt("Ingresa el nombre de la segunda persona:");
-          const diaPersona2 = parseInt(prompt("Ingresa el día de nacimiento de la segunda persona:"));
-          const mesPersona2 = parseInt(prompt("Ingresa el mes de nacimiento de la segunda persona (1-12):"));
-          const anioPersona2 = parseInt(prompt("Ingresa el año de nacimiento de la segunda persona:"));
-          
-          // Calcular edades
-          const edadPersona1 = calcularEdad(`${anioPersona1}-${mesPersona1}-${diaPersona1}`);
-          const edadPersona2 = calcularEdad(`${anioPersona2}-${mesPersona2}-${diaPersona2}`);
-          
-          // Determinar quién es mayor
-          let personaMayor = "";
-          if (edadPersona1 > edadPersona2) {
-            personaMayor = nombrePersona1;
-          } else if (edadPersona2 > edadPersona1) {
-            personaMayor = nombrePersona2;
-          } else {
-            personaMayor = "Ambas personas tienen la misma edad.";
-          }
-          
-          // Mostrar resultados
-          console.log(`${nombrePersona1} tiene ${edadPersona1} años.`);
-          console.log(`${nombrePersona2} tiene ${edadPersona2} años.`);
-          console.log(`La persona mayor es: ${personaMayor}`);
+    function calcularEdad(fechaNacimiento) {
+        const hoy = new Date();
+        const nacimiento = new Date(fechaNacimiento);
+        let edad = hoy.getFullYear() - nacimiento.getFullYear();
+
+        const cumpleEsteAnio = nacimiento.setFullYear(hoy.getFullYear());
+        if (hoy < cumpleEsteAnio) {
+            edad--;
+        }
+
+        return edad;
     }
+
+    const namePersona1 = prompt("Ingresa el nombre de la primera persona:");
+    const datePersona1 = parseInt(prompt("Ingresa el día de nacimiento de la primera persona:"));
+    const monthPersona1 = parseInt(prompt("Ingresa el mes de nacimiento de la primera persona (1-12):"));
+    const yearPersona1 = parseInt(prompt("Ingresa el año de nacimiento de la primera persona:"));
+
+    const namePersona2 = prompt("Ingresa el nombre de la segunda persona:");
+    const datePersona2 = parseInt(prompt("Ingresa el día de nacimiento de la segunda persona:"));
+    const monthPersona2 = parseInt(prompt("Ingresa el mes de nacimiento de la segunda persona (1-12):"));
+    const yearPersona2 = parseInt(prompt("Ingresa el año de nacimiento de la segunda persona:"));
+
+    const edadPersona1 = calcularEdad(`${yearPersona1}-${monthPersona1}-${datePersona1}`);
+    const edadPersona2 = calcularEdad(`${yearPersona2}-${monthPersona2}-${datePersona2}`);
+
+       let personaMayor = "";
+    switch(true) {
+    case edadPersona1 > edadPersona2:
+        personaMayor = namePersona1;
+        break;
+    case edadPersona2 > edadPersona1:
+        personaMayor = namePersona2;
+        break;
+    default: 
+    personaMayor = "Ambas personas tienen la misma edad.";
+    }
+
+    document.getElementById('resultado').innerHTML = `${namePersona1} tiene ${edadPersona1} años. ${namePersona2} tiene ${edadPersona2} años. La persona mayor es: ${personaMayor}`;
 }
 
 //Ejercicio 21
