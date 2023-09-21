@@ -205,7 +205,6 @@ function ejer09() {
 }
 
 function ejer09Result() {
-    let num6 = 1;
     for (let y = 1; y <= 200; y++) {
         if (y % 6 === 0) {
             document.getElementById('resultado').innerHTML += `, ${y}`;
@@ -232,10 +231,10 @@ function ejer10() {
 function ejer10Result() {
     function calcularEdad(fechaNacimiento) {
         const hoy = new Date();
-        const nacimiento = new Date(fechaNacimiento);
-        let edad = hoy.getFullYear() - nacimiento.getFullYear();
+        const birthday = new Date(fechaNacimiento);
+        let edad = hoy.getFullYear() - birthday.getFullYear();
 
-        const cumpleEsteAnio = nacimiento.setFullYear(hoy.getFullYear());
+        const cumpleEsteAnio = birthday.setFullYear(hoy.getFullYear());
         if (hoy < cumpleEsteAnio) {
             edad--;
         }
@@ -256,19 +255,84 @@ function ejer10Result() {
     const edadPersona1 = calcularEdad(`${yearPersona1}-${monthPersona1}-${datePersona1}`);
     const edadPersona2 = calcularEdad(`${yearPersona2}-${monthPersona2}-${datePersona2}`);
 
-       let personaMayor = "";
-    switch(true) {
-    case edadPersona1 > edadPersona2:
-        personaMayor = namePersona1;
-        break;
-    case edadPersona2 > edadPersona1:
-        personaMayor = namePersona2;
-        break;
-    default: 
-    personaMayor = "Ambas personas tienen la misma edad.";
+    let personaMayor = "";
+    switch (true) {
+        case edadPersona1 > edadPersona2:
+            personaMayor = namePersona1;
+            break;
+        case edadPersona2 > edadPersona1:
+            personaMayor = namePersona2;
+            break;
+        default:
+            personaMayor = "Ninguna, ambas personas tienen la misma edad.";
     }
 
     document.getElementById('resultado').innerHTML = `${namePersona1} tiene ${edadPersona1} años. ${namePersona2} tiene ${edadPersona2} años. La persona mayor es: ${personaMayor}`;
+}
+
+//Ejercicio 11
+function ejer11() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Un programa que me capture el salario de un empleado y me realice el
+    descuento de pensión y salud, pero si el salario es superior a 1200000 no le
+    debe descontar.</p>
+    <input type="button" value="Enviar" onclick="ejer11Result()">
+    `;
+}
+
+// En Colombia para este año el descuento por salud es del 12.5% y para pensión es del 16%
+function ejer11Result() {
+    const salarioBruto = parseFloat(prompt('Ingrese su salario base (sin ningún descuento)'));
+    const salud = salarioBruto * 0.125;
+    const pension = salarioBruto * 0.16;
+    document.getElementById('resultado').innerHTML = `Su salario neto es: ${salarioBruto >= '1200000'
+        ? salarioBruto
+        : salarioBruto - salud - pension}`;
+}
+
+//Ejercicio 12
+function ejer12() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Un programa que, capture el salario de un empleado, y lo divida por 30
+    días del mes, también debe capturar los días trabajados y me debe
+    mostrar el total ganado.</p>
+    <input type="button" value="Enviar" onclick="ejer12Result()">
+    `;
+}
+
+function ejer12Result() {
+    const salarioMes = parseFloat(prompt('Ingrese el salario mensual'));
+    const salarioDiaTrabajo = salarioMes / 30;
+    const diasTrabajados = parseFloat(prompt('¿Cuántos días trabajó este mes?'))
+    let salarioTrabajador = salarioDiaTrabajo * diasTrabajados;
+    document.getElementById('resultado').innerHTML = `Usted trabajó ${diasTrabajados} días; por tanto su salario neto es ${salarioTrabajador}`;
+}
+
+//Ejercicio 13
+function ejer13() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Mientras a<=1500; contar hasta 1500 e imprimir los números divisibles por
+    4 y 5 y decir si son pares o impares.</p>
+    <input type="button" value="Enviar" onclick="ejer13Result()">
+    `;
+}
+
+function ejer13Result() {
+    const par = " el número es par";
+    const impar = "el número es impar";
+    for (let a = 1; a <= 1500; a++) {
+        if (a % 4 === 0 && a % 2 == 0) {
+            document.getElementById('resultado').innerHTML += `, <br> ${a}  ${par}`;
+        }
+        else if (a % 5 === 0 && a % 2 !== 0) {
+            document.getElementById('resultado').innerHTML += `, <br> ${a} ${impar}`;
+        }
+        ;
+    }
+
 }
 
 //Ejercicio 21
