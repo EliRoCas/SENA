@@ -281,7 +281,7 @@ function ejer11() {
     `;
 }
 
-// En Colombia para este año el descuento por salud es del 12.5% y para pensión es del 16%
+// En Colombia, para este año, el descuento por salud es del 12.5% y para pensión es del 16%
 function ejer11Result() {
     const salarioBruto = parseFloat(prompt('Ingrese su salario base (sin ningún descuento)'));
     const salud = salarioBruto * 0.125;
@@ -330,20 +330,154 @@ function ejer13Result() {
         else if (a % 5 === 0 && a % 2 !== 0) {
             document.getElementById('resultado').innerHTML += `, <br> ${a} ${impar}`;
         }
-        ;
     }
 
 }
+
+//Ejercicio 14
+function ejer14() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Elaborar un algoritmo que tenga 10 números enteros. El programa debe
+    sumar todos los números que sean múltiplos de 3.</p>
+    <input type="button" value="Enviar" onclick="ejer14Result()">
+    `;
+}
+
+function ejer14Result() {
+    const divisible3 = "es un número divisible por 3. Agregado a la suma."
+    let sumaEnteros = 0;
+    for (let z = 1; z <= 10; z++) {
+        document.getElementById('resultado').innerHTML += `,<br> ${z}`;
+        if (z % 3 === 0) {
+            document.getElementById('resultado').innerHTML += `, <br> ${sumaEnteros += z}, ${divisible3}`;
+        }
+    }
+}
+
+//Ejercicio 15
+function ejer15() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Mostrar las 30 primeras potencias de 3 y la suma de ellos.</p>
+    <input type="button" value="Enviar" onclick="ejer15Result()">
+    `;
+}
+function ejer15Result() {
+    let sumaPotencias3 = 0;
+    for (let n = 0; n <= 30; n++) {
+        let potencia3 = Math.pow(3, n);
+        document.getElementById('resultado').innerHTML += `<br> La potencia es ${potencia3}. 
+         Las potencias sumadas dan ${sumaPotencias3 += (potencia3)}`
+    }
+}
+
+
+//Ejercicio 16
+function ejer16() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Un programa con 5 alumnos cada uno con 5 notas, calcular el promedio de
+    sus notas por alumnos y solo muestra los que ganaron.</p>
+    <input type="button" value="Enviar" onclick="ejer16Result()">
+    `;
+}
+
+function ejer16Result() {
+
+}
+
+//Ejercicio 17
+function ejer17() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Diseñar un algoritmo, con el dividendo y el divisor y que luego me calcule el
+    residuo y el cociente de dicha división.</p>
+    <input type="button" value="Enviar" onclick="ejer17Result()">
+    `;
+}
+
+function ejer17Result() {
+    const dividendo = parseFloat(prompt('Ingrese el número que va a dividir (dividendo).'));
+    const divisor = parseFloat(prompt('Ingrese el númer por el que lo va a dividir (divisor)'));
+    const cociente = dividendo / divisor;
+    const residuo = dividendo % divisor;
+
+    document.getElementById('resultado').innerHTML = `${dividendo} dividido ${divisor} es igual a ${cociente}, el residuo es ${residuo}.`;
+}
+
+//Ejercicio 18
+function ejer18() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Diseñar un algoritmo que intercambie los valores de dos variables
+    numéricas.</p>
+    <input type="button" value="Enviar" onclick="ejer18Result()">
+    `;
+}
+
+function ejer18Result() {
+    let x = parseFloat(prompt('Ingrese el valor de x'));
+    let y = parseFloat(prompt('Ingrese el valor de y'));
+
+    document.getElementById('resultado').innerHTML = `Los valores ingresados son x = ${x}, y= ${y}, los valores intercambiados son ${[x, y] = [y, x]}`;
+}
+
+//Ejercicio 19
+function ejer19() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Diseñar un algoritmo que me permita ingresar un valor inicial y luego un
+    valor final, para luego calcular el valor central de los números.</p>
+    <input type="button" value="Enviar" onclick="ejer19Result()">
+    `;
+}
+
+function ejer19Result() {
+    const numeroInicial = parseFloat(prompt('Ingrese el valor inicial'));
+    const numeroFinal = parseFloat(prompt('Ingrese el valor final'));
+    document.getElementById('resultado').innerHTML = `El valor inicial es 
+${numeroInicial}, el valor final es 
+${numeroFinal}. El valor central entre ellos es 
+${(numeroInicial + numeroFinal) / 2}`;
+}
+
+//Ejercicio 20
+function ejer20() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Se desea calcular independientemente la suma de los números pares e
+    impares comprendidos entre 1 y 50.</p>
+    <input type="button" value="Enviar" onclick="ejer20Result()">
+    `;
+}
+
+function ejer20Result() {
+    let sumarPar = 0;
+    let sumarImpar = 0;
+    for (number20 = 1; number20 <= 50; number20++) {
+        if (number20 % 2 == 0) {
+            sumarPar += number20;
+            document.getElementById('resultado').innerHTML += ` ${number20} es par. Sumado al par anterior es igual a ${sumarPar}<br>`;
+        }
+        else if (number20 % 2 !== 0) {
+            sumarImpar += number20;
+            document.getElementById('resultado').innerHTML += ` ${number20} es impar. Sumado al impar anterior es igual a ${sumarImpar}<br>`;
+        }
+
+    }
+}
+
 
 //Ejercicio 21
 function ejer21() {
     document.getElementById('enunciado').innerHTML = `
     <p>Determinar el promedio de una lista de 20 de números positivos.</p>
-    <input type="button" value="Enviar" onclick="pos20()">
+    <input type="button" value="Enviar" onclick="ejer21Result()">
     `;
 }
 
-function pos20() {
+function ejer21Result() {
     let Ninicial = parseFloat(prompt('Ingrese el número inicial'));
     let suma = 0;
     let promedio;
@@ -359,4 +493,36 @@ function pos20() {
 
     promedio = suma / 20;
     document.getElementById('resultado').innerHTML += `El número final fue ${Ninicial}. El promedio fue ${promedio}`;
+}
+
+//Ejercicio 22
+function ejer22() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Diseñar un algoritmo que calcule los 5 primeros números impares que
+    preceden a un numero N</p>
+    <input type="button" value="Enviar" onclick="ejer22Result()">
+    `;
+}
+
+function ejer22Result() {
+    const numeroEje22 = parseFloat(prompt('Ingrese un número'));
+    const numerosPrecedentesN = [];
+    const mensaje = "Los 5 primeros números que preceden"
+    let contador = 0;
+
+    for (let numeroActual = numeroEje22--; numeroActual > 1 && contador < 5; numeroActual--) {
+        if (numeroActual & 2 !== 0) {
+            numerosPrecedentesN.push(numeroActual);
+            contador++;
+        }
+        if (numerosPrecedentesN.length > 0) {
+            document.getElementById('resultado').innerHTML = `${mensaje} a ${numeroEje22} son: ${numerosPrecedentesN.reverse().join(",")}`;
+        }
+        else {
+            alert(`No es posible analizar ${mensaje} a ${numeroEje22}`);
+
+        }
+    }
+
 }
