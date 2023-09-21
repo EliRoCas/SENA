@@ -506,23 +506,29 @@ function ejer22() {
 }
 
 function ejer22Result() {
-    const numeroEje22 = parseFloat(prompt('Ingrese un número'));
-    const numerosPrecedentesN = [];
-    const mensaje = "Los 5 primeros números que preceden"
-    let contador = 0;
-
-    for (let numeroActual = numeroEje22--; numeroActual > 1 && contador < 5; numeroActual--) {
-        if (numeroActual & 2 !== 0) {
-            numerosPrecedentesN.push(numeroActual);
-            contador++;
-        }
-        if (numerosPrecedentesN.length > 0) {
-            document.getElementById('resultado').innerHTML = `${mensaje} a ${numeroEje22} son: ${numerosPrecedentesN.reverse().join(",")}`;
-        }
-        else {
-            alert(`No es posible analizar ${mensaje} a ${numeroEje22}`);
-
+    const numEjer22 = parseFloat(prompt('Ingrese un número'));
+    for (numX = numEjer22; numX > 1; numX--) {
+        if (numX % 2 !== 0) {
+            document.getElementById('resultado').innerHTML += `, ${numX}`;
         }
     }
+}
 
+//Ejercicio 23
+function ejer23() {
+
+    document.getElementById('enunciado').innerHTML = `
+    <p>Hacer un programa que muestre si los cincos primeros numeros impares
+    son múltiples de tres arrancando de 10</p>
+    <input type="button" value="Enviar" onclick="ejer23Result()">
+    `;
+}
+
+function ejer23Result() {
+    for (let numEjer23 = 10; numEjer23 <= 40; numEjer23++) {
+        document.getElementById('resultado').innerHTML += `,<br> ${numEjer23}`;
+        if (numEjer23 % 3 === 0 && numEjer23 %2!==0 ) {
+            document.getElementById('resultado').innerHTML += `, <br> ${numEjer23} es divisible por 3 y es impar`;
+        }
+    }
 }
