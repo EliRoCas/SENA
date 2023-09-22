@@ -104,7 +104,6 @@ function ejer04Result() {
             : numPulsacionesF}`;
 }
 
-
 //Ejercicio 05 
 function ejer05() {
 
@@ -372,7 +371,6 @@ function ejer15Result() {
     }
 }
 
-
 //Ejercicio 16
 function ejer16() {
 
@@ -467,6 +465,7 @@ function ejer20() {
 }
 
 function ejer20Result() {
+    document.getElementById('resultado').innerHTML +="";
     let sumarPar = 0;
     let sumarImpar = 0;
     for (number20 = 1; number20 <= 50; number20++) {
@@ -481,7 +480,6 @@ function ejer20Result() {
 
     }
 }
-
 
 //Ejercicio 21
 function ejer21() {
