@@ -384,83 +384,22 @@ function ejer16() {
 }
 
 function ejer16Result() {
-    let solution = document.getElementById('resultado');
+    let promedio = 0;
+    for (let student = 1; student <= 5; student++) {
+        const nombreEstudiante = prompt(`Ingrese el nombre del Estudiante ${student}`);
+        let sumaNotas = 0;
 
-    const nombreEstudiante1 = prompt('Ingrese el nombre del Estudiante 1');
-    const nota1Est1 = parseFloat(prompt('Ingrese la nota 1'));
-    const nota2Est1 = parseFloat(prompt('Ingrese la nota 2'));
-    const nota3Est1 = parseFloat(prompt('Ingrese la nota 3'));
-    const nota4Est1 = parseFloat(prompt('Ingrese la nota 4'));
-    const nota5Est1 = parseFloat(prompt('Ingrese la nota 5'));
-
-    const notaDefEst1 = (nota1Est1 + nota2Est1 + nota3Est1 + nota4Est1 + nota5Est1) / 5;
-
-    const nombreEstudiante2 = prompt('Ingrese el nombre del Estudiante 2');
-    const nota1Est2 = parseFloat(prompt('Ingrese la nota 1'));
-    const nota2Est2 = parseFloat(prompt('Ingrese la nota 2'));
-    const nota3Est2 = parseFloat(prompt('Ingrese la nota 3'));
-    const nota4Est2 = parseFloat(prompt('Ingrese la nota 4'));
-    const nota5Est2 = parseFloat(prompt('Ingrese la nota 5'));
-
-    const notaDefEst2 = (nota1Est2 + nota2Est2 + nota3Est2 + nota4Est2 + nota5Est2) / 5;
-
-
-    const nombreEstudiante3 = prompt('Ingrese el nombre del Estudiante 3');
-    const nota1Est3 = parseFloat(prompt('Ingrese la nota 1'));
-    const nota2Est3 = parseFloat(prompt('Ingrese la nota 2'));
-    const nota3Est3 = parseFloat(prompt('Ingrese la nota 3'));
-    const nota4Est3 = parseFloat(prompt('Ingrese la nota 4'));
-    const nota5Est3 = parseFloat(prompt('Ingrese la nota 5'));
-
-    const notaDefEst3 = (nota1Est3 + nota2Est3 + nota3Est3 + nota4Est3 + nota5Est3) / 5;
-
-
-    const nombreEstudiante4 = prompt('Ingrese el nombre del Estudiante 4');
-    const nota1Est4 = parseFloat(prompt('Ingrese la nota 1'));
-    const nota2Est4 = parseFloat(prompt('Ingrese la nota 2'));
-    const nota3Est4 = parseFloat(prompt('Ingrese la nota 3'));
-    const nota4Est4 = parseFloat(prompt('Ingrese la nota 4'));
-    const nota5Est4 = parseFloat(prompt('Ingrese la nota 5'));
-
-    const notaDefEst4 = (nota1Est4 + nota2Est4 + nota3Est4 + nota4Est4 + nota5Est4) / 5;
-
-
-    const nombreEstudiante5 = prompt('Ingrese el nombre del Estudiante 5');
-    const nota1Est5 = parseFloat(prompt('Ingrese la nota 1'));
-    const nota2Est5 = parseFloat(prompt('Ingrese la nota 2'));
-    const nota3Est5 = parseFloat(prompt('Ingrese la nota 3'));
-    const nota4Est5 = parseFloat(prompt('Ingrese la nota 4'));
-    const nota5Est5 = parseFloat(prompt('Ingrese la nota 5'));
-
-    const notaDefEst5 = (nota1Est5 + nota2Est5 + nota3Est5 + nota4Est5 + nota5Est5) / 5;
-
-    let aprobado1 = "";
-    let aprobado2 = "";
-    let aprobado3 = "";
-    let aprobado4 = "";
-    let aprobado5 = "";
-
-    
-    // quizá sea mejor usar un while o un for. Investigar mejor
-    if (notaDefEst1 >= 3.5) {
-        aprobado1 = nombreEstudiante1;
-        ;
+        for (let notaEst = 1; notaEst <= 5; notaEst++) {
+            let notasEstu = parseFloat(prompt(`Ingrese la nota ${notaEst}`));
+            sumaNotas += notasEstu;
+        }
+        promedio = sumaNotas / 5;
+        if (promedio <= 3) {
+            document.getElementById('resultado').innerHTML += `<br> El estudiante ${student, nombreEstudiante}, obtuvo un promedio de ${promedio.toFixed(2)}. Aprobó.`
+        }
     }
-    if (notaDefEst2 >= 3.5) {
-        aprobado2 = nombreEstudiante2;
-        ;
-    }
-    if (notaDefEst3 >= 3.5) {
-        aprobado3 = nombreEstudiante3;
-    }
-    if (notaDefEst4 >= 3.5) {
-        aprobado4 = nombreEstudiante4;
-    }
-    if (notaDefEst5 >= 3.5) {
-        aprobado5 = nombreEstudiante5;
-    }
-    solution.innerHTML = `Los estudiantes aprobados son: ${aprobado1} ${aprobado2} ${aprobado3} ${aprobado4} ${aprobado5}`;
 }
+
 
 //Ejercicio 17
 function ejer17() {
