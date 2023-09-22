@@ -520,14 +520,18 @@ function ejer22() {
 }
 
 function ejer22Result() {
+    document.getElementById('resultado').innerHTML = "";
     const numEjer22 = parseFloat(prompt('Ingrese el número natural (N)'));
     let contador = 0;
-    for (numX = numEjer22; numX > 1; numX--) {
-        contador++;
-        if (numX % 2 !== 0 && contador <= 10) {
+    for (numX = numEjer22; numX >= 1; numX--) {
+
+        if (numX % 2 !== 0 && contador < 5) {
+            contador++;
             document.getElementById('resultado').innerHTML += `${numX}, `;
         }
-
+    }
+    if (contador < 5) {
+        alert('El número es muy pequeño, por tanto no tiene 5 números impares que lo precedan');
     }
 }
 
@@ -543,12 +547,15 @@ function ejer23() {
 
 function ejer23Result() {
     for (let numEjer23 = 10; numEjer23 <= 20; numEjer23++) {
-        document.getElementById('resultado').innerHTML += `,<br> ${numEjer23}`;
+        
         if (numEjer23 % 2 !== 0 && numEjer23 % 3 !== 0) {
-            document.getElementById('resultado').innerHTML += `, <br> ${numEjer23} es impar, pero no divisible por 3`;
+            document.getElementById('resultado').innerHTML += ` <br> ${numEjer23} es impar, pero no divisible por 3`;
         }
         else if (numEjer23 % 2 !== 0 && numEjer23 % 3 === 0) {
-            document.getElementById('resultado').innerHTML += `, <br> ${numEjer23} es impar y es divisible por 3`;
+            document.getElementById('resultado').innerHTML += ` <br> ${numEjer23} es impar y es divisible por 3`;
+        }
+        else {
+            document.getElementById('resultado').innerHTML += `<br> ${numEjer23}`;
         }
     }
 }
