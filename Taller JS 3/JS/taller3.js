@@ -90,6 +90,22 @@ function ejem04() {
 
 }
 
-function ejem05(){
+//Array con autollenado, ubica un número que se encuentre en el centro y lo imprime. 
+function ejem05() {
+
+    let numeros05 = [];
+    while (numeros05.length <= 59) {
+        let numAleatorio = Math.floor(Math.random() * 100);
+        numeros05.push(numAleatorio);
+    }
+
+    let ubi05 = numeros05.length / 2;
+    let centro05 = numeros05[ubi05];
+
+
+    document.getElementById('resultado').innerHTML = ` ${numeros05.join('-')}, el elemento que ocupa el centro es ${centro05}`;
+}
+
+function ejem06(){
     
 }
