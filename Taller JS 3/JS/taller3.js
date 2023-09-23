@@ -1,67 +1,24 @@
 function mostrar(dato) {
-    switch (dato) {
-        case 1:
-            document.getElementById('ejemplo2').style.display = "block";
-            document.getElementById('ejemplo1').style.display = "none";
-            document.getElementById('ejemplo3').style.display = "none";
-            document.getElementById('ejemplo4').style.display = "none";
-            document.getElementById('ejemplo5').style.display = "none";
-            document.getElementById('ejemplo6').style.display = "none";
-            document.getElementById('ejemplo7').style.display = "none";
-            break;
-        case 2:
-            document.getElementById('ejemplo2').style.display = "block";
-            document.getElementById('ejemplo1').style.display = "none";
-            document.getElementById('ejemplo3').style.display = "none";
-            document.getElementById('ejemplo4').style.display = "none";
-            document.getElementById('ejemplo5').style.display = "none";
-            document.getElementById('ejemplo6').style.display = "none";
-            document.getElementById('ejemplo7').style.display = "none";
-            break;
-        case 3:
-            document.getElementById('ejemplo3').style.display = "block";
-            document.getElementById('ejemplo2').style.display = "none";
-            document.getElementById('ejemplo1').style.display = "none";
-            document.getElementById('ejemplo4').style.display = "none";
-            document.getElementById('ejemplo5').style.display = "none";
-            document.getElementById('ejemplo6').style.display = "none";
-            document.getElementById('ejemplo7').style.display = "none";
-            break;
-        case 4:
-            document.getElementById('ejemplo4').style.display = "block";
-            document.getElementById('ejemplo1').style.display = "none";
-            document.getElementById('ejemplo2').style.display = "none";
-            document.getElementById('ejemplo3').style.display = "none";
-            document.getElementById('ejemplo5').style.display = "none";
-            document.getElementById('ejemplo6').style.display = "none";
-            document.getElementById('ejemplo7').style.display = "none";
-            break;
-        case 5:
-            document.getElementById('ejemplo5').style.display = "block";
-            document.getElementById('ejemplo1').style.display = "none";
-            document.getElementById('ejemplo2').style.display = "none";
-            document.getElementById('ejemplo3').style.display = "none";
-            document.getElementById('ejemplo4').style.display = "none";
-            document.getElementById('ejemplo6').style.display = "none";
-            document.getElementById('ejemplo7').style.display = "none";
-            break;
-        case 6:
-            document.getElementById('ejemplo6').style.display = "block";
-            document.getElementById('ejemplo1').style.display = "none";
-            document.getElementById('ejemplo2').style.display = "none";
-            document.getElementById('ejemplo3').style.display = "none";
-            document.getElementById('ejemplo4').style.display = "none";
-            document.getElementById('ejemplo5').style.display = "none";
-            document.getElementById('ejemplo7').style.display = "none";
-            break;
-        case 7:
-            document.getElementById('ejemplo7').style.display = "block";
-            document.getElementById('ejemplo1').style.display = "none";
-            document.getElementById('ejemplo2').style.display = "none";
-            document.getElementById('ejemplo3').style.display = "none";
-            document.getElementById('ejemplo4').style.display = "none";
-            document.getElementById('ejemplo5').style.display = "none";
-            document.getElementById('ejemplo6').style.display = "none";
-            break;
+    for (let ejercicio = 1; ejercicio <= 7; ejercicio++) {
+        document.getElementById('ejemplo' + ejercicio).style.display = "none";
+    }
+
+    document.getElementById('ejemplo' + dato).style.display = "block";
+}
+
+function ejem01() {
+    let numeros01 = [64, 56, 37, 34, 29];
+    console.log(numeros);
+    for (let num = 0; num <= numeros01.length; num++) {
+        document.getElementById('resultado').innerHTML = `Estos son los 5 números almacenados ${numeros01}`;
     }
 }
+
+function ejem02() {
+    let numeros02 = [];
+    while (numeros02.length < 10) {
+        let numAleatorio = Math.random
+    }
+
+}
+
