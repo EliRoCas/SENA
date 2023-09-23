@@ -31,6 +31,7 @@ function ejem02() {
 
 }
 
+// Array con llenado "automático" por usuario, retornándo los múltiplos del número dado por el usuario.
 function ejem03() {
     let longitudArray = parseInt(prompt('Ingrese el tamaño que debe tener el array.'));
     let numeroBase = parseInt(prompt('Ingrese el número del que desea optener los múltiplos.'));
@@ -41,12 +42,54 @@ function ejem03() {
             numeros03.push(multiplo);
             multiplo += numeroBase;
         }
-       return numeros03;
+        return numeros03;
     }
-   let resultado = arrayRelleno();
-    document.getElementById('resultado').innerHTML=`El número ingresado fue ${numeroBase}, sus múltiplos son ${resultado.join(', ')}.`;
+    let resultado = arrayRelleno();
+    document.getElementById('resultado').innerHTML = `El número ingresado fue ${numeroBase}, sus múltiplos son ${resultado.join(', ')}.`;
 }
 
-function ejem04(){
+//Array con autollenado,  busca un número y regresa su posición o posiciones en el arreglo. 
+function ejem04() {
+    let valorBuscado = parseInt(prompt('Ingrese el número de 1 a 30 que desea buscar.'));
+
+    let numeros04 = [];
+    numeros04.push(4);
+    numeros04.push(8);
+    numeros04.push(7);
+    numeros04.push(12);
+    numeros04.push(6);
+
+    while (numeros04.length < 30) {
+        let numAleatorio04 = Math.floor(Math.random() * 50);
+        numeros04.push(4);
+        numeros04.push(numAleatorio04);
+        numeros04.push(8);
+        numeros04.push(7);
+        numeros04.push(numAleatorio04);
+        numeros04.push(12);
+        numeros04.push(numAleatorio04);
+        numeros04.push(6);
+        numeros04.push(numAleatorio04);
+
+    }
+
+    const posiciones04 = [];
+    for (ubi04 = 0; ubi04 < numeros04.length; ubi04++) {
+        if (numeros04[ubi04] === valorBuscado) {
+            posiciones04.push(ubi04);
+        }
+    }
+
+    console.log(numeros04);
+
+    if (posiciones04.length > 0) {
+        document.getElementById('resultado').innerHTML = `El número ${valorBuscado} se encuentra en la (o las) posición(es) ${posiciones04.join(', ')}. `;
+    }
+    else
+        document.getElementById('resultado').innerHTML = `${valorBuscado} no se encontró en el arreglo o su formato fue inválido.`
+
+}
+
+function ejem05(){
     
 }
