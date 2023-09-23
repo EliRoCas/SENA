@@ -1,0 +1,46 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+
+nav {
+    text-align: center;
+    background-color: #008bda;
+    padding: 10%;
+
+}
+
+nav>span {
+    cursor: pointer;
+    color: #ffff;
+    font-weight: bold;
+}
+
+nav>span:hover {
+    color: #0cdc32;
+}
+
+table {
+    text-align: center;
+    width: 80%;
+}
+
+#enunciado,
+#resultado {
+    width: 50%;
+    padding: 10%;
+}
+
+#resultado {
+    background-color: #808080;
+}
+
+#ejemplo1,
+#ejemplo2,
+#ejemplo3,
+#ejemplo4,
+#ejemplo5,
+#ejemplo6,
+#ejemplo7 {
+    display: none;
+}
