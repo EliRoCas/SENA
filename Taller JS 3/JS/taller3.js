@@ -8,6 +8,8 @@ function mostrar(dato) {
 
 // Array con 5 números
 function ejem01() {
+    document.getElementById('resultado').innerHTML = "";
+
     let numeros01 = [64, 56, 37, 34, 29];
     console.log(numeros01);
     for (let num = 0; num <= numeros01.length; num++) {
@@ -17,6 +19,8 @@ function ejem01() {
 
 // Array con números aleatorios, suma de esos números y su media. 
 function ejem02() {
+    document.getElementById('resultado').innerHTML = "";
+
     let numeros02 = [];
     while (numeros02.length <= 10) {
         let numAleatorio = Math.floor(Math.random() * 50);
@@ -33,6 +37,8 @@ function ejem02() {
 
 // Array con llenado "automático" por usuario, retornándo los múltiplos del número dado por el usuario.
 function ejem03() {
+    document.getElementById('resultado').innerHTML = "";
+
     let longitudArray = parseInt(prompt('Ingrese el tamaño que debe tener el array.'));
     let numeroBase = parseInt(prompt('Ingrese el número del que desea optener los múltiplos.'));
     function arrayRelleno() {
@@ -50,6 +56,8 @@ function ejem03() {
 
 //Array con autollenado,  busca un número y regresa su posición o posiciones en el arreglo. 
 function ejem04() {
+    document.getElementById('resultado').innerHTML = "";
+
     let valorBuscado = parseInt(prompt('Ingrese el número de 1 a 30 que desea buscar.'));
 
     let numeros04 = [];
@@ -92,6 +100,7 @@ function ejem04() {
 
 //Array con autollenado, ubica un número que se encuentre en el centro y lo imprime. 
 function ejem05() {
+    document.getElementById('resultado').innerHTML = "";
 
     let numeros05 = [];
     while (numeros05.length <= 59) {
@@ -108,6 +117,7 @@ function ejem05() {
 
 //Matriz 3x3 que suma los datos internos
 function ejem06() {
+    document.getElementById('resultado').innerHTML = "";
 
     const suma06 = [
         [1, 2],
@@ -125,6 +135,8 @@ function ejem06() {
 
 //Matriz para tablas de multiplicar
 function ejem07() {
+    document.getElementById('resultado').innerHTML = "";
+
     const tablasMultiplicar = [];
     let factor1 = parseFloat(prompt('Ingrese el número de la tabla de multiplicar que requiere'));
 
