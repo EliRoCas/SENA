@@ -106,6 +106,23 @@ function ejem05() {
     document.getElementById('resultado').innerHTML = ` ${numeros05.join('-')}, el elemento que ocupa el centro es ${centro05}`;
 }
 
-function ejem06(){
-    
+//Matriz 3x3 que suma los datos internos
+function ejem06() {
+
+    const suma06 = [
+        [1, 2],
+        [4, 5],
+        [7, 8],
+    ];
+
+    for (let contadorFila = 0; contadorFila < suma06.length; contadorFila++) {
+        let fila = suma06[contadorFila];
+        let sum = fila[0] + fila[1];
+        fila.push(sum);
+        document.getElementById('resultado').innerHTML += `<ul> <li>${fila[0]}+ ${fila[1]} = ${fila[2]} </li></ul>`
+    }
+}
+
+function ejem07() {
+
 }
