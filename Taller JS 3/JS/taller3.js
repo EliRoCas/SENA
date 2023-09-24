@@ -123,6 +123,14 @@ function ejem06() {
     }
 }
 
+//Matriz para tablas de multiplicar
 function ejem07() {
+    const tablasMultiplicar = [];
+    let factor1 = parseFloat(prompt('Ingrese el número de la tabla de multiplicar que requiere'));
 
+    for (let factor2 = 1; factor2 <= 10; factor2++) {
+        let producto = factor1 * factor2;
+        tablasMultiplicar.push([factor1, factor2, producto]);
+        document.getElementById('resultado').innerHTML += `<br>${factor1} * ${factor2} = ${producto}<br>`
+    }
 }
